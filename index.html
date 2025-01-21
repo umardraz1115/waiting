@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Available</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1e293b, #64748b);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin: 0;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        /* Button Style */
+        .wait-btn {
+            padding: 0.8rem 2rem;
+            font-size: 1.2rem;
+            color: #1e293b;
+            background: #ffcc00;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .wait-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+            background: #ffd700;
+        }
+
+        /* Animation for text */
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+
+        /* Animated Background */
+        .background-bubbles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: float 8s infinite ease-in-out;
+        }
+
+        .bubble:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            left: 20%;
+            animation-duration: 10s;
+        }
+
+        .bubble:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            left: 70%;
+            animation-duration: 12s;
+        }
+
+        .bubble:nth-child(4) {
+            width: 50px;
+            height: 50px;
+            left: 50%;
+            animation-duration: 15s;
+        }
+
+        /* Floating effect for bubbles */
+        @keyframes float {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-300px) scale(1.2);
+            }
+
+            100% {
+                transform: translateY(-600px) scale(0.8);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>I'm Away Right Now</h1>
+        <p>Hang tight! I'll be back on stream shortly.</p>
+    </div>
+
+    <!-- Background bubbles -->
+    <div class="background-bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <script>
+        // JavaScript for Button Interaction
+        document.querySelector('.wait-btn').addEventListener('click', () => {
+            console.log('Your viewers appreciate your patience!');
+        });
+    </script>
+</body>
+
+</html>
